@@ -3,11 +3,6 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - wget http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.0.1ubuntu2.17_amd64.deb -O apt.deb
-      - sudo dpkg -i apt.deb
-      - sudo apt install awscli
-      - sudo apt-get install python3-pip
-      - sudo pip3 install --upgrade awscli
       - echo Connecting to Amazon ECR...
       - REPOSITORY_URI=433865391271.dkr.ecr.eu-west-1.amazonaws.com/simple-app
       - aws --version
